@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import  CardList   from './components/CardList/CardList';
+import  CardList    from './components/CardList/CardList';
 import { SearchBox } from './components/SearchBox/SearchBox';
 
 class App extends Component {
@@ -29,6 +29,7 @@ searchMonsters = (e) => {
     const filteredMonsters = monsters.filter(monster => monster.name.toLowerCase().includes(searchedMonsters.toLocaleLowerCase()))
     return (
       <div className="App">
+        <h1>Monsters Rolodex</h1>
         <SearchBox 
           placeholder="Search Monsters"
           handleChange={this.searchMonsters}
